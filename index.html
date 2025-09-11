@@ -1,71 +1,177 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Collision Repair</title>
+    <link rel="stylesheet" href="../styles/style.css" />
+    <!-- Bootstrap 5 CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <link rel="stylesheet" href="../collisionRepair/styles/style.css">
-  <!-- Bootstrap 5 CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-dark sticky-top px-3">
+      <!-- Brand -->
+      <a
+        class="navbar-brand d-flex align-items-center mx-auto mx-md-0"
+        href="#"
+      >
+        <img src="logo.png" alt="Logo" height="40" class="me-2" />
+        Collision Repair
+      </a>
 
-<body>
-
-  <!-- Navbar -->
-  <nav class="navbar">
-    <div class="navbar-logo">
-      <img src="logo.png" alt="Logo" height="40" />
-    </div>
-    <div class="navbar-title">Collision Repair</div>
-    <div class="navbar-menu">
-      <button class="hamburger" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <div class="container mt-3">
-    <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2000">
-      <div class="carousel-indicators">
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+      <!-- Desktop Menu -->
+      <div class="d-none d-md-flex ms-auto">
+        <ul class="navbar-nav flex-row">
+          <li class="nav-item">
+            <a class="nav-link active px-3" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link px-3" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="./WhatsApp Image 2025-09-08 at 10.31.29 PM (1).jpeg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="./WhatsApp Image 2025-09-08 at 10.31.29 PM (2).jpeg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="./9a93d020-2790-485a-8d33-527fdc7dec9b.jpg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="./ae07f36e-1c47-427e-8468-6b72629b83d1.jpg" class="d-block w-100" alt="...">
-        </div>
+
+      <!-- Mobile Hamburger -->
+      <button
+        class="navbar-toggler d-block d-md-none ms-auto"
+        type="button"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbar"
+        aria-controls="offcanvasNavbar"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </nav>
+
+    <!-- Offcanvas Sidebar (for mobile only) -->
+    <div
+      class="offcanvas offcanvas-end text-bg-dark"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+          <li class="nav-item">
+            <a class="nav-link" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
-  <!-- Banner -->
-  <!-- Services  -->
-  <!-- Testimonials -->
-  <!-- Contact -->
-  <!-- Footer -->
-  <section></section>
-  <!-- Bootstrap 5 JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+
+    <!-- Carousel -->
+    <div class="container-fluid p-0">
+      <div
+        id="carouselExampleIndicators"
+        class="carousel slide carousel-fade"
+        data-bs-ride="carousel"
+        data-bs-interval="3000"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./images/WhatsApp Image 2025-09-08 at 10.31.29 PM (1).jpeg"
+              class="d-block w-100"
+              alt="Collision repair example 1"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/WhatsApp Image 2025-09-08 at 10.31.29 PM (2).jpeg"
+              class="d-block w-100"
+              alt="Collision repair example 2"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/9a93d020-2790-485a-8d33-527fdc7dec9b.jpg"
+              class="d-block w-100"
+              alt="Collision repair example 3"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./images/ae07f36e-1c47-427e-8468-6b72629b83d1.jpg"
+              class="d-block w-100"
+              alt="Collision repair example 4"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleIndicators"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Services -->
+    <!-- Testimonials -->
+    <!-- Contact -->
+    <!-- Footer -->
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
