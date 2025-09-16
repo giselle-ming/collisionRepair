@@ -57,3 +57,5 @@ yarn.lock # If using npm or Bun for package management
 bun.lockb # If using npm or Yarn for package management
 
 .vscode/
+Code Citations.md
+node_modules/
